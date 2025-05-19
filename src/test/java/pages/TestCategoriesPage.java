@@ -22,7 +22,7 @@ public class TestCategoriesPage extends BasePage{
         testCategoriesHelper.getListElements(TestCategoriesLocators.listOfCategories);
 
         //Verifies that when clicking one category from Product Menu, the title is the one expected
-        //Last category doesn't have a title so it only verifies that the URL are matching
+        //Last category doesn't have a title so it only verifies that the URLs are matching
         for (int i = 0; i < listOfCategoriesElement.size(); i++) {
             listOfCategoriesElement =testCategoriesHelper.getListElements(TestCategoriesLocators.listOfCategories);
             WebElement category = listOfCategoriesElement.get(i);

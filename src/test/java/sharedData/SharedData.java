@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -22,15 +21,6 @@ public class SharedData {
     public void prepareEnvironment() {
         testName = this.getClass().getSimpleName();
         driver = new ChromeDriver();
-
-//        String remoteEnv = System.getProperty("remote");
-//        if (Boolean.parseBoolean(remoteEnv)) {
-//            ChromeOptions options = new ChromeOptions();
-//            options.addArguments("--headless=new");
-//            driver = new ChromeDriver(options);
-//        } else {
-//            driver = new ChromeDriver();
-//        }
 
         driver.get("https://carturesti.md/");
         driver.manage().window().maximize();
