@@ -7,7 +7,7 @@ import sharedData.SharedData;
 
 public class TestCategories extends SharedData {
     @Test
-    public void testMethod() throws InterruptedException {
+    public void testMethod() {
 
         TestCategoriesModel testData = new TestCategoriesModel("src/main/resources/TestCategoriesData.json");
 

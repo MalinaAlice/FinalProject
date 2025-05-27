@@ -13,7 +13,7 @@ public class TestCategoriesPage extends BasePage{
         super(driver);
     }
 
-    public void categoriesTest(TestCategoriesModel testData) throws InterruptedException {
+    public void categoriesTest(TestCategoriesModel testData) {
 
         testCategoriesHelper.clickLocator(TestCategoriesLocators.productButton);
         LoggerUtility.infoLog("The user pressed the Product Menu.");
@@ -28,7 +28,9 @@ public class TestCategoriesPage extends BasePage{
             WebElement category = listOfCategoriesElement.get(i);
 
             category.click();
-            Thread.sleep(2000);
+
+            testCategoriesHelper.forceWait(2000);
+//            Thread.sleep(2000);
 
             if (i < 18) {
 

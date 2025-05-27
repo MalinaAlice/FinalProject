@@ -47,4 +47,10 @@ public class TestCategoriesHelper {
     public void validateCurrentURL(String expectedURL, String message) {
         Assert.assertEquals(driver.getCurrentUrl(), expectedURL, message);
     }
+
+    public void forceWait(int value) {
+        try {
+            Thread.sleep(value);
+        } catch (InterruptedException ignored) {}
+    }
 }
